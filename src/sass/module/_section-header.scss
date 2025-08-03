@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.section-header {
+    display: grid;
+    grid-template-columns: rem(170) 1fr;
+    align-items: center;
+    @include mq(md){
+        grid-template-columns: rem(200) 1fr;
+    }
+}
+
+.section-header__title {
+    font-size: rem(32);
+    font-weight: $regular;
+    font-family: $third-font-family;
+    color: $white;
+    line-height: calc(39 / 32);
+    letter-spacing: 0.05em;
+    position: relative;
+    display: inline-block;
+    padding-left: rem(50);
+    @include mq(md){
+        font-size: rem(38);
+        line-height: calc(46 / 38);
+    }
+}
+
+.section-header__title::before {
+    content: "";
+    display: inline-block;
+    background-image: url(../images/common/section_logo-white.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(20);
+    height: rem(20);
+    width: rem(20);
+}
+
+.section-header__line {
+    background-color: $white;
+    width: 100%;
+    height: rem(1);
+    display: inline-block;
+
+}
+

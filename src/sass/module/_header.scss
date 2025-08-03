@@ -1,0 +1,96 @@
+@use "global" as *;
+
+.header.is-black {
+    background-color: $black;
+}
+
+.header {
+    height: rem(75);
+    background-color: transparent;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    @include mq(md){
+        height: rem(95);
+        border-bottom: rem(1) solid $white;
+    }
+}
+
+.header__inner {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    padding-inline: rem(15);
+    justify-content: space-between;
+    margin: 0 auto;
+    @include mq(md){
+        padding-inline: rem(20);
+    }
+}
+
+.header__logo-img {
+    width: rem(132);
+    height: rem(22);
+    @include mq(md){
+       width: rem(171);
+       height: rem(30);
+    }
+}
+
+.header__nav {
+    height: inherit;
+
+}
+
+.header__lists {
+    height: inherit;
+    display: flex;
+    gap: rem(36);
+
+}
+
+.header__list {
+    height: inherit;
+    font-size: rem(18);
+    font-weight: $medium;
+    font-family: $third-font-family;
+    color: $white;
+    line-height: calc(22 / 18);
+
+}
+
+.header__link {
+    height: inherit;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.header__contact {
+    font-size: rem(18);
+    font-weight: $medium;
+    font-family: $third-font-family;
+    color: $white;
+    line-height: calc(22 / 18);
+
+}
+
+.header__contact--button {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    border: rem(1) solid $white;
+    padding: rem(12) rem(32);
+    border-radius: rem(3);
+}
+
+
+@media (any-hover: hover) {
+    .header__link:hover,
+    .header__contact--button:hover {
+        opacity: 0.6;
+    }
+}
+
