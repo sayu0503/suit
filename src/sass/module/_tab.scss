@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.tab {
+    width: 100%;
+}
+
+.tab__list {
+   gap: rem(44);
+   display: flex;
+   justify-content: center;
+   padding-inline: rem(20);
+   @include mq(md){
+        gap: rem(45);
+        max-width: 30%;
+        margin-inline: auto;
+   }
+}
+
+.tab__button {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-size: rem(14);
+    font-weight: $regular;
+    font-family: $second-font-family;
+    color: $white;
+    line-height: calc(17 / 14);
+    letter-spacing: 0.05em;
+    padding-bottom: rem(4);
+    border-bottom: rem(1) solid $black5;
+    padding-inline: rem(2);
+    white-space: nowrap;
+    @include mq(md){
+        letter-spacing: 0.23em;
+        padding-bottom: rem(10);
+    }
+}
+
+.tab__button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    height: rem(1);
+    border-bottom: rem(1) solid $black5;
+    transition: background-color 0.3s, width 0.3s;
+}
+
+.tab__button.is-active {
+    width: 100%;
+    border-bottom: rem(1) solid $gray3;
+}
+
+.tab__contents {
+    margin-top: rem(50);
+}
+
+.tab__content {
+    display: none;
+    
+}
+
+.tab__content.is-active {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    padding-inline: rem(47);
+    @include mq(md){
+        flex-direction: initial;
+        gap: rem(20);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(rem(330), 1fr));
+        padding-inline: rem(85);
+    }
+  }
+

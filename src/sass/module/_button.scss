@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.button {
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.button__text {
+    padding: rem(14) rem(47);
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+    display: inline-block;
+    font-size:rem(14);
+    font-weight: $regular;
+    font-family:  $second-font-family;
+    color: $white;
+    line-height: calc(17 / 14);
+    letter-spacing: 0.05em;
+    position: relative;
+    @include mq(md){
+        font-size:rem(16);
+        line-height: calc(19 / 16);
+        padding: rem(16) rem(57);
+    }
+}
+ .button__text-contact {
+    padding: rem(14) rem(47);
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+    display: inline-block;
+    font-size:rem(14);
+    font-weight: $regular;
+    font-family:  $second-font-family;
+    color: $white;
+    line-height: calc(17 / 14);
+    letter-spacing: 0.05em;
+    position: relative;
+    @include mq(md){
+        font-size:rem(16);
+        line-height: calc(19 / 16);
+        padding: rem(16) rem(50);
+    }
+ }
+
+.button__text::after{
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/next.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    width: rem(5);
+    height: rem(10);
+}
+@media (any-hover: hover) {
+    .button:hover {
+        box-shadow: rem(3) rem(3) rem(6) rgba($black4, $alpha: 0.8);
+    }
+}

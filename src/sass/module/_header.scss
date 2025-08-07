@@ -1,19 +1,20 @@
 @use "global" as *;
 
-.header.is-black {
-    background-color: $black;
-}
-
 .header {
     height: rem(75);
     background-color: transparent;
     position: fixed;
     z-index: 1000;
     width: 100%;
+    transition: background-color 0.3s ease;
     @include mq(md){
         height: rem(95);
         border-bottom: rem(1) solid $white;
     }
+}
+
+.header.is-black {
+    background-color: $black;
 }
 
 .header__inner {
@@ -74,7 +75,7 @@
     font-family: $third-font-family;
     color: $white;
     line-height: calc(22 / 18);
-
+    margin-left: rem(50);
 }
 
 .header__contact--button {

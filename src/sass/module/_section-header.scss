@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .section-header {
-    display: grid;
-    grid-template-columns: rem(170) 1fr;
+    display: flex;
     align-items: center;
+    gap: rem(16);
     @include mq(md){
-        grid-template-columns: rem(200) 1fr;
+       gap: rem(30);
     }
 }
 
@@ -17,12 +17,18 @@
     line-height: calc(39 / 32);
     letter-spacing: 0.05em;
     position: relative;
-    display: inline-block;
-    padding-left: rem(50);
+    display: flex;
+    padding-left: rem(24);
+    align-items: center;
     @include mq(md){
         font-size: rem(38);
         line-height: calc(46 / 38);
+        padding-left: rem(33);
     }
+}
+
+.section-header__title--color {
+    color: $black;
 }
 
 .section-header__title::before {
@@ -33,18 +39,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: rem(20);
+    top: 48%;
+    transform: translateY(-48%);
+    left: rem(0);
     height: rem(20);
     width: rem(20);
+    margin-right: rem(10);
+}
+
+.section-header__title--color::before {
+    background-image: url(../images/common/section_logo-black.svg);
 }
 
 .section-header__line {
     background-color: $white;
     width: 100%;
     height: rem(1);
-    display: inline-block;
+    flex-grow: 1;
+}
 
+.section-header__line--color {
+    background-color: $gray2;
 }
 

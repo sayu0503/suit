@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.js-fv-swiper,
+.swiper-slide picture,
+.swiper-slide img {
+  height: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-slide img {
+  object-fit: cover;
+}
+
+.swiper-slide {
+  height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    content: "";
+    @include mq(md){
+        position: absolute;
+        top: 58%;
+        z-index: 20;
+        margin-top: -20px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: rem(34);
+        width: rem(34);
+        background-color: rgba($white, $alpha: 0.06);
+    }
+}
+
+.swiper-button-prev {
+    @include mq(md){
+        left: 5%;
+        top: 56%;
+    }
+}
+
+.swiper-button-next {
+    @include mq(md){
+        right: 5%;
+        top: 56%;
+    }
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: "";
+    @include mq(md){
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+.swiper-button-prev::after {
+    @include mq(md){
+        background-image: url(../images/common/prev.png);
+        width: rem(5);
+        height: rem(10);
+    }
+}
+
+.swiper-button-next::after {
+    @include mq(md){
+        background-image: url(../images/common/next.png);
+        width: rem(5);
+        height: rem(10);
+    }
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: rem(10);
+    @include mq(md){
+        gap: rem(20);
+    }
+  }
+
+.swiper-pagination-bullet {
+    opacity: 1;
+    border-radius: unset;
+    width: rem(40);
+    height: rem(2);
+    background-color: $black3;
+    @include mq(md){
+        width: rem(70);
+    }
+
+}
+
+.swiper-pagination-bullet-active {
+    border-radius: unset;
+    width: rem(40);
+    height: rem(2);
+    background-color: $white;
+    @include mq(md){
+        width: rem(70);
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: rem(21);
+    @include mq(md){
+       bottom: rem(43);
+       left: rem(10);
+    }
+}

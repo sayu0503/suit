@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.top-contact__wrap {
+    @include mq(md){
+        display: grid;
+        grid-template-columns: 53% 47%;
+    }
+}
+
+.top-contact {
+    position: relative;
+    z-index: 1;
+    min-height: rem(312);
+    @include mq(md){
+        background-color: $black2;
+        min-height: none;
+    }
+}
+
+.top-contact::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url(../images/common/contact_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    @include mq(md){
+       display: none;
+    }
+}
+
+.inner.top-contact__inner {
+    @include mq(md){
+        max-width: rem(700);
+        padding-left: rem(90);
+    }
+}
+
+.top-contact__content {
+    margin-top: rem(50);
+    text-align: center;
+    @include mq(md){
+       margin-top: rem(60);
+       padding-right: rem(65);
+    }
+}
+
+.top-contact__text {
+    font-size: rem(14);
+    font-weight: $regular;
+    font-family: $second-font-family;
+    color: $white;
+    line-height: calc(17 / 14);
+    letter-spacing: 0.05em;
+}
+
+.top-contact__btn {
+    margin-top: rem(18);
+    @include mq(md){
+       margin-top: rem(21);
+    }
+}
+
+.top-contact__image {
+    display: none;
+    @include mq(md){
+       display: block;
+    }
+}
+
+.top-contact__image img{
+        aspect-ratio: 670 / 399;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+

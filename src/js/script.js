@@ -39,17 +39,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         if (target.startsWith("#")) {
           event.preventDefault();
           const position = $(target).offset().top;
-  
+
           $("html, body").animate({ scrollTop: position }, 500);
         }
-  
+
         // 共通でメニューを閉じる処理
         $(".js-hamburger").removeClass("is-active");
         $(".js-sp-nav").fadeOut(300);
         $(".header").removeClass("is-open");
         $("body").css("overflow", "auto"); // スクロールを有効に戻す
       });
-    
+
       // ウィンドウサイズが768px以上になったらメニューを強制的に閉じる
       $(window).resize(function () {
         if (window.matchMedia("(min-width: 768px)").matches) {
@@ -59,19 +59,51 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           $("body").css("overflow", "auto");
         }
       });
-  
+
       // アンカーリンクのスムーススクロール
       $('a[href^="#"]').click(function (e) {
         e.preventDefault();
         var headerHeight = $(".js-header").outerHeight();
         var href = $(this).attr("href");
         var target = href === "#" || href === "" ? $("html") : $(href);
-  
+
         if (target.length) {
           var position = target.offset().top - headerHeight;
           $("html, body").animate({ scrollTop: position }, 600, "swing");
         }
       });
 
+      //ファーストビュースライド
+      var swiper = new Swiper(".js-fv-swiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 
-});
+   //タブ
+    $(function () {
+      const tabButton = $(".js-tab-button"),
+        tabContent = $(".js-tab-content");
+      tabButton.on("click", function () {
+        let index = tabButton.index(this);
+
+        tabButton.removeClass("is-active");
+        $(this).addClass("is-active");
+        tabContent.removeClass("is-active");
+        tabContent.eq(index).addClass("is-active");
+      });
+    });
+  });
+

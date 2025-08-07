@@ -23,18 +23,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!--Swiper-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="js-header">
     <div class="header__inner">
       <h1 class="header__logo">
         <img src="./assets/images/common/logo.svg" alt="ExciteCode" class="header__logo-img"
@@ -79,21 +80,255 @@
               <a href="#contact" class="sp-nav__contact--link">Contact</a>
             </li>
           </ul>
-         
         </div>
       </nav>
     </div>
   </header>
   <main>
-    <!-- <div class="title__section-header">
-      <div class="section-header">
-        <p class="section-header__title">Service</p>
+    <!--Fv-->
+    <div class="fv" id="js-fv">
+      <div class="fv__inner">
+        <div class="swiper js-fv-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/fv_img1.jpg" media="(min-width: 768px)" width="2880" height="1536">
+                <img src="./assets/images/common/fv_img1-sp.jpg" alt="サングラスをかけたスーツの男性" decoding="async" width="750" height="1334">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/fv_img2.jpg" media="(min-width: 768px)" width="2880"
+                  height="1536">
+                <img src="./assets/images/common/fv_img2-sp.jpg" alt="腕時計を触るスーツの男性" decoding="async" width="750" height="1334">
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/images/common/fv_img3.jpg" media="(min-width: 768px)" width="2880"
+                  height="1536">
+                <img src="./assets/images/common/fv_img3-sp.jpg" alt="蝶ネクタイをしたスーツの男性" decoding="async" width="750" height="1334">
+              </picture>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="fv__title-wrap">
+            <p class="fv__title">MADE to ORDER
+            </p>
+            <p class="fv__subtitle">上質を仕立てる</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--about-->
+    <section class="top-about l-top-about">
+      <div class="top-about__inner inner">
+        <div class="top-about__section-header top-about__section-header">
+          <div class="section-header">
+            <h2 class="section-header__title">About</h2>
+            <span class="section-header__line"></span>
+          </div>
+          <div class="top-about__wrapper">
+          <div class="top-about__content">
+          <div class="top-about__media">
+            <img src="./assets/images/common/about_img1.jpg" alt="採寸する職人の写真" class="top-about__image"
+            width="240" height="333" loading="lazy" decoding="async">
+          </div>
+          <p class="top-about__catch">
+            上質を追及する<br class="u-mobile">老舗として<br>
+            その歴史と<br class="u-mobile">誇りを持って<br>
+            お客様と<br class="u-mobile">向き合ってます
+          </p>
+        </div>
+          <div class="top-about__text">
+            <p class="top-about__paragraph">
+              創業以来、厳選した高品質で豊富な生地、研鑽を重ねた縫製技術で多くのスーツを仕立ててきました。
+            </p>
+            <p class="top-about__paragraph">
+              伝統あるテーラーだからできる、芯地や裏地など、細部へのこだわり。<br>
+              わたしたちはワンランク上のオーダースーツをお約束します。
+            </p>
+          </div>
+          <div class="top-about__btn">
+            <a href="about.html" class="button"><span class="button__text">View More</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+   <section class="top-service l-top-service">
+    <div class="top-service__inner inner">
+      <div class="top-service__section-header section-header">
+            <h2 class="section-header__title">Service</h2>
+            <span class="section-header__line"></span>
+          </div>
+          <div class="top-service__tab tab">
+            <div class="tab__list">
+              <button class="tab__button js-tab-button is-active">オーダーメイドスーツ</button>
+              <button class="tab__button js-tab-button">その他のアイテム</button>
+            </div>
+          </div>
+          <div class="tab__contents">
+            <div class="tab__content js-tab-content is-active">
+              <article class=" service-card">
+                <figure class="service__card__image">
+                  <img src="./assets/images/common/service_img1.jpg" alt="カジュアルスーツ"
+                  width="250" height="280" loading="lazy" decoding="async">
+                  <span class="service-card__label">suit</span>
+                </figure>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">カジュアルスーツ</h3>
+                  <p class="service-card__text">
+                    あなただけでのスタイルで着こなす、あなただけの一着を
+                  </p>
+                </div>
+              </article>
+              <article class="service-card" >
+                <figure class="service__card__image">
+                  <img src="./assets/images/common/service_img2.jpg" alt="リクルートスーツ"
+                  width="250" height="280" loading="lazy" decoding="async">
+                  <span class="service-card__label">suit</span>
+                </figure>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">リクルートスーツ</h3>
+                  <p class="service-card__text">
+                    あなただけでのスタイルで着こなす、あなただけの一着を
+                  </p>
+                </div>
+              </article>
+              <article class="service-card" >
+                <figure class="service__card__image">
+                  <img src="./assets/images/common/service_img3.jpg" alt="フォーマルスーツ"
+                  width="250" height="280" loading="lazy" decoding="async">
+                  <span class="service-card__label">suit</span>
+                </figure>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">フォーマルスーツ</h3>
+                  <p class="service-card__text">
+                    あなただけでのスタイルで着こなす、あなただけの一着を
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="tab__content js-tab-content">
+              <article class=" service-card">
+                <figure class="service__card__image">
+                  <img src="./assets/images/common/service_img4.jpg" alt="シューズ"
+                  width="250" height="280" loading="lazy" decoding="async">
+                  <span class="service-card__label">other</span>
+                </figure>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">シューズ</h3>
+                  <p class="service-card__text">
+                    あなただけでのスタイルで着こなす、あなただけの一着を
+                  </p>
+                </div>
+              </article>
+              <article class="service-card" >
+                <figure class="service__card__image">
+                  <img src="./assets/images/common/service_img5.jpg" alt="ネクタイ"
+                  width="250" height="280" loading="lazy" decoding="async">
+                  <span class="service-card__label">other</span>
+                </figure>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">ネクタイ</h3>
+                  <p class="service-card__text">
+                    あなただけでのスタイルで着こなす、あなただけの一着を
+                  </p>
+                </div>
+              </article>
+              <article class="service-card" >
+                <figure class="service__card__image">
+                  <img src="./assets/images/common/service_img6.jpg" alt="フォーマルバッグ"
+                  width="250" height="280" loading="lazy" decoding="async">
+                  <span class="service-card__label">other</span>
+                </figure>
+                <div class="service-card__body">
+                  <h3 class="service-card__title">フォーマルバッグ</h3>
+                  <p class="service-card__text">
+                    あなただけでのスタイルで着こなす、あなただけの一着を
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+    </div>
+   </section>
+
+   
+   <section class="top-news l-top-news">
+    <div class="top-news__inner inner">
+      <div class="top-news__section-header section-header">
+        <h2 class="section-header__title section-header__title--color">News</h2>
+        <span class="section-header__line section-header__line--color"></span>
+      </div>
+      <ul class="top-news__list">
+        <li class="top-news__item">
+          <div class="top-news__meta">
+            <time datetime="2022-11-23" class="top-news__date">2022.11.23</time>
+            <span class="top-news__label">お知らせ</span>
+          </div>
+            <p class="top-news__title">12月のお休みのお知らせ</p>
+        </li>
+        <li class="top-news__item">
+          <div class="top-news__meta">
+            <time datetime="2022-11-18" class="top-news__date">2022.11.18</time>
+            <span class="top-news__label">お知らせ</span>
+          </div>
+            <p class="top-news__title">オンラインストアを開設しました</p>
+        </li>
+        <li class="top-news__item">
+          <div class="top-news__meta">
+            <time datetime="2022-11-04" class="top-news__date">2022.11.04</time>
+            <span class="top-news__label">イベント</span>
+          </div>
+            <p class="top-news__title">創業80周年記念特別割引適用</p>
+        </li>
+        <li class="top-news__item">
+          <div class="top-news__meta">
+            <time datetime="2022-10-26" class="top-news__date">2022.10.26</time>
+            <span class="top-news__label">お知らせ</span>
+          </div>
+            <p class="top-news__title">インスタグラムはじめました</p>
+        </li>
+        <li class="top-news__item">
+          <div class="top-news__meta">
+            <time datetime="2022-10-11" class="top-news__date">2022.10.11</time>
+            <span class="top-news__label">イベント</span>
+          </div>
+            <p class="top-news__title">11月23日～リニューアルオープンイベントがはじまります</p>
+        </li>
+      </ul>
+    </div>
+   </section>
+
+   <div class="top-contact__wrap">
+   <section class="top-contact l-top-contact">
+    <div class="top-contact__inner inner">
+      <div class="top-contact__section-header section-header">
+        <h2 class="section-header__title">Contact</h2>
         <span class="section-header__line"></span>
       </div>
-    </div> -->
+     <div class="top-contact__content">
+      <div class="top-contact__text">お気軽にご相談ください</div>
+      <div class="top-contact__btn">
+        <a href="contact.html" class="button"><span class="button__text-contact">お問い合わせはこちら</span></a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="top-contact__media">
+    <img src="./assets/images/common/contact_img.jpg" alt="ハサミとメジャー" class="top-contact__image"
+    width="670" height="399" loading="lazy" decoding="async">
+  </div>
+</div>
   </main>
-  <footer>
-
+  <!--フッター-->
+  <footer class="footer l-footer">
+    <div class="footer__inner inner">
+      <p class="footer__copyright">&copy;ExciteCode all rights reserved</p>
+    </div>
   </footer>
 </body>
 
