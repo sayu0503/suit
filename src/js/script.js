@@ -63,7 +63,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       // アンカーリンクのスムーススクロール
       $('a[href^="#"]').click(function (e) {
         e.preventDefault();
-        var headerHeight = $(".js-header").outerHeight();
+        var headerHeight = $("#js-header").outerHeight();
         var href = $(this).attr("href");
         var target = href === "#" || href === "" ? $("html") : $(href);
 
@@ -103,6 +103,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         $(this).addClass("is-active");
         tabContent.removeClass("is-active");
         tabContent.eq(index).addClass("is-active");
+      });
+    });
+//モーダル
+    $(function () {
+      const open = $(".js-modal-open"),
+        close = $(".js-modal__close"),
+        modal = $(".js-modal");
+
+      //開くボタンをクリックしたらモーダルを表示する
+      open.on("click", function () {
+        $('body').css('overflow-y', 'hidden');
+        modal.addClass("is-open");
+      });
+
+      //閉じるボタンをクリックしたらモーダルを閉じる
+      close.add(modal).on("click", function () {
+        modal.removeClass("is-open");
+        $('body').css('overflow-y','auto');
       });
     });
   });

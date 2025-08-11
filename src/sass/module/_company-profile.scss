@@ -1,0 +1,111 @@
+@use "global" as *;
+
+.company-profile {
+    background-color: $black;
+}
+
+.inner.company-profile__inner {
+    max-width: rem(850);
+}
+
+.company-profile__table {
+    display: flex;
+    flex-direction: column;
+    gap: rem(22);
+    margin-top: rem(40);
+    padding-inline: rem(30);
+    @include mq(md){
+       margin-top: rem(72);
+       gap: rem(18);
+    }
+}
+
+.company-profile__row {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    padding-bottom: rem(25);
+    border-bottom: rem(1) solid $gray2;
+    @include mq(md){
+        display: grid;
+        grid-template-columns: rem(135) 1fr;
+        flex-direction: initial;
+        gap: rem(0);
+        padding-bottom: rem(16);
+
+    }
+}
+.company-profile__link,
+.company-profile__term,
+.company-profile__desc {
+    font-size:  rem(14);
+    font-weight: $light;
+    font-family: $base-font-family;
+    color: $white;
+    line-height: calc(17 / 14);
+}
+
+.company-profile__link {
+    display: block;
+}
+.company-profile__wrap {
+    display: flex;
+    gap: rem(8);
+    flex-wrap: wrap;
+  }
+
+.company-profile__map-link {
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+    margin-top: rem(10);
+    position: relative;
+    font-size:  rem(14);
+    font-weight: $light;
+    font-family: $base-font-family;
+    color: $white;
+    line-height: calc(17 / 14);
+    cursor: pointer;
+    @include mq(md){
+       margin-top: rem(20);
+    }
+}
+
+.company-profile__wrap {
+    display: flex;
+}
+
+.company-profile__row-wrap {
+    display: flex;
+    align-items: end;
+    gap: rem(4);
+}
+
+.company-profile__map-link::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: rem(82);
+    height: rem(1);
+    background-color: $white;
+
+}
+
+.company-profile__map-icon {
+    display: block;
+    width: rem(16);
+    height: rem(16);
+    position: relative;
+}
+
+.company-profile__map-icon::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/common/map-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(10);
+    height: rem(14);
+}
+

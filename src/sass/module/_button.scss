@@ -24,9 +24,9 @@
     }
 }
  .button__text-contact {
-    padding: rem(14) rem(47);
+    padding: rem(14) rem(40);
     border: rem(1) solid $white;
-    border-radius: rem(4);
+    border-radius: rem(6);
     display: inline-block;
     font-size:rem(14);
     font-weight: $regular;
@@ -55,6 +55,21 @@
     width: rem(5);
     height: rem(10);
 }
+
+.button__text-contact::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(../images/common/next.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    width: rem(5);
+    height: rem(10);
+}
+
 @media (any-hover: hover) {
     .button:hover {
         box-shadow: rem(3) rem(3) rem(6) rgba($black4, $alpha: 0.8);
