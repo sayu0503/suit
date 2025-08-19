@@ -7,7 +7,8 @@
     z-index: 1000;
     width: 100%;
     transition: background-color 0.3s ease;
-    @include mq(md){
+
+    @include mq(md) {
         height: rem(95);
         border-bottom: rem(1) solid $white;
     }
@@ -24,7 +25,8 @@
     padding-inline: rem(15);
     justify-content: space-between;
     margin: 0 auto;
-    @include mq(md){
+
+    @include mq(md) {
         padding-inline: rem(20);
     }
 }
@@ -32,15 +34,15 @@
 .header__logo-img {
     width: rem(132);
     height: rem(22);
-    @include mq(md){
-       width: rem(171);
-       height: rem(30);
+
+    @include mq(md) {
+        width: rem(171);
+        height: rem(30);
     }
 }
 
 .header__nav {
     height: inherit;
-
 }
 
 .header__lists {
@@ -87,11 +89,10 @@
     border-radius: rem(3);
 }
 
-
 @media (any-hover: hover) {
+
     .header__link:hover,
     .header__contact--button:hover {
         opacity: 0.6;
     }
 }
-

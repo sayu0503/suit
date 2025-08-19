@@ -2,7 +2,8 @@
 
 .l-company-profile {
     padding-block: rem(60);
-    @include mq(md){
-       padding-block: rem(82);
+
+    @include mq(md) {
+        padding-block: rem(82);
     }
 }

@@ -10,39 +10,42 @@
     border: rem(1) solid $white;
     border-radius: rem(4);
     display: inline-block;
-    font-size:rem(14);
+    font-size: rem(14);
     font-weight: $regular;
-    font-family:  $second-font-family;
+    font-family: $second-font-family;
     color: $white;
     line-height: calc(17 / 14);
     letter-spacing: 0.05em;
     position: relative;
-    @include mq(md){
-        font-size:rem(16);
+
+    @include mq(md) {
+        font-size: rem(16);
         line-height: calc(19 / 16);
         padding: rem(16) rem(57);
     }
 }
- .button__text-contact {
+
+.button__text-contact {
     padding: rem(14) rem(40);
     border: rem(1) solid $white;
     border-radius: rem(6);
     display: inline-block;
-    font-size:rem(14);
+    font-size: rem(14);
     font-weight: $regular;
-    font-family:  $second-font-family;
+    font-family: $second-font-family;
     color: $white;
     line-height: calc(17 / 14);
     letter-spacing: 0.05em;
     position: relative;
-    @include mq(md){
-        font-size:rem(16);
+
+    @include mq(md) {
+        font-size: rem(16);
         line-height: calc(19 / 16);
         padding: rem(16) rem(50);
     }
- }
+}
 
-.button__text::after{
+.button__text::after {
     position: absolute;
     content: "";
     display: block;

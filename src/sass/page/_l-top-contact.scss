@@ -3,7 +3,8 @@
 .l-top-contact {
     padding-top: rem(58);
     padding-bottom: rem(80);
-    @include mq(md){
+
+    @include mq(md) {
         padding-top: rem(80);
         padding-bottom: rem(0);
     }

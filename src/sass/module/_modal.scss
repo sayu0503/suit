@@ -1,117 +1,120 @@
 @use "global" as *;
 
-  .modal {
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    display: flex;
-    visibility: hidden;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: rem(40) rem(20);
-    transition: opacity 0.3s, visibility 0.3s;
-    opacity: 0;
-    background: rgba(0, 0, 0, 50%);
-  }
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: rem(40) rem(20);
+  transition: opacity 0.3s, visibility 0.3s;
+  opacity: 0;
+  background: rgba(0, 0, 0, 50%);
+}
 
-  .modal.is-open {
-    visibility: visible;
-    opacity: 1;
-  }
+.modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
 
-  .modal__body {
-    position: relative;
-    display: inline-block;
-    width: 80%;
-    z-index: 2;
-    background-color: $white2;
-    @include mq(md){
-        width: 40%;
-    }
+.modal__body {
+  position: relative;
+  display: inline-block;
+  width: 80%;
+  z-index: 2;
+  background-color: $white2;
 
+  @include mq(md) {
+    width: 40%;
   }
+}
 
-  .modal__content {
-    aspect-ratio: 268 / 275;
+.modal__content {
+  aspect-ratio: 268 / 275;
+}
 
-  }
-  .modal__title {
-    position: absolute;
-    top: rem(14);
-    left: rem(14);
-    font-size: rem(14);
-    font-weight: $regular;
-    font-family: $base-font-family;
-    color: $black;
-    line-height: calc(17 / 14);
-    letter-spacing: 0.05em;
-    z-index: 3;
-    @include mq(md){
-       font-size: rem(15);
-       line-height: calc(18 / 15);
-       top: rem(24);
-       left: rem(24);
-    }
-  }
+.modal__title {
+  position: absolute;
+  top: rem(14);
+  left: rem(14);
+  font-size: rem(14);
+  font-weight: $regular;
+  font-family: $base-font-family;
+  color: $black7;
+  line-height: calc(17 / 14);
+  letter-spacing: 0.05em;
+  z-index: 3;
 
-  .modal__close-button {
-    position: absolute;
-    top: rem(19);
-    right: rem(14);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: rem(10);
-    height: rem(12);
-    cursor: pointer;
-    z-index: 3;
-    @include mq(md){
-        top: rem(30);
-        right: rem(24);
-    }
+  @include mq(md) {
+    font-size: rem(15);
+    line-height: calc(18 / 15);
+    top: rem(24);
+    left: rem(24);
   }
+}
 
-  .modal__close-button::before {
-    content: "";
-    position: absolute;
-    background-image: url(../images/common/close.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    vertical-align: middle;
-  }
+.modal__close-button {
+  position: absolute;
+  top: rem(19);
+  right: rem(14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(10);
+  height: rem(12);
+  cursor: pointer;
+  z-index: 3;
 
-  .modal__map-wrapper {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    aspect-ratio: 240 / 240;
-    overflow: hidden;
-    margin-top: rem(56);
-    padding: 0;
-    padding-inline: rem(14);
-    padding-bottom: rem(6);
-    @include mq(md){
-        margin-top: rem(70);
-        padding-inline: rem(24);
-        padding-bottom: rem(10);
-    }
+  @include mq(md) {
+    top: rem(30);
+    right: rem(24);
   }
+}
 
-  .modal__map-wrapper iframe {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
+.modal__close-button::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/common/close.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
 
-  body.is-fixed {
-    position: fixed; /* 画面固定 */
-    width: 100%;
-    overflow: hidden; /* スクロール禁止 */
+.modal__map-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 240 / 240;
+  overflow: hidden;
+  margin-top: rem(56);
+  padding: 0;
+  padding-inline: rem(14);
+  padding-bottom: rem(6);
+
+  @include mq(md) {
+    margin-top: rem(70);
+    padding-inline: rem(24);
+    padding-bottom: rem(10);
   }
+}
+
+.modal__map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body.is-fixed {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}

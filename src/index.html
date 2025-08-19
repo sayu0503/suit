@@ -40,7 +40,7 @@
       <h1 class="header__logo">
         <a href="index.html" class="header__logo--link">
         <img src="./assets/images/common/logo.svg" alt="ExciteCode" class="header__logo-img"
-        width="171" height="30" loading="lazy" decoding="async">
+        width="171" height="30" loading="eager" decoding="async">
       </a>
       </h1>
       <div class="header__drawer hamburger js-hamburger u-mobile">
@@ -62,24 +62,26 @@
         </ul>
       </nav>
       <div class="header__contact u-desktop">
-        <a href="#" class="header__contact--button">Contact</a>
+        <a href="contact.html" class="header__contact--button">Contact</a>
       </div>
       <nav class="sp-nav js-sp-nav">
         <div class="sp-nav__inner inner">
           <ul class="sp-nav__lists">
-            <div class="sp-nav__group">
-            <li class="sp-nav__list">
-              <a href="about.html" class="sp-nav__link">About</a>
-            </li>
-            <li class="sp-nav__list">
-              <a href="#service" class="sp-nav__link">Service</a>
-            </li>
-            <li class="sp-nav__list">
-              <a href="#news" class="sp-nav__link">News</a>
-            </li>
-          </div>
+            <li class="sp-nav__group">
+              <ul class="sp-nav__list-lists">
+                <li class="sp-nav__list">
+                <a href="about.html" class="sp-nav__link">About</a>
+              </li>
+              <li class="sp-nav__list">
+                <a href="#service" class="sp-nav__link">Service</a>
+              </li>
+              <li class="sp-nav__list">
+                <a href="#news" class="sp-nav__link">News</a>
+              </li>
+            </ul>
+          </li>
             <li class="sp-nav__contact">
-              <a href="#contact" class="sp-nav__contact--link">Contact</a>
+              <a href="contact.html" class="sp-nav__contact--link">Contact</a>
             </li>
           </ul>
         </div>
@@ -94,22 +96,29 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <picture>
+                <source type="image/webp" srcset="./assets/images/common/fv_img1.webp" media="(min-width: 768px)" width="2880" height="1536">
+                <source type="image/webp" srcset="./assets/images/common/fv_img1-sp.webp" media="(max-width: 767px)" width="750" height="1334">
                 <source srcset="./assets/images/common/fv_img1.jpg" media="(min-width: 768px)" width="2880" height="1536">
-                <img src="./assets/images/common/fv_img1-sp.jpg" alt="サングラスをかけたスーツの男性" decoding="async" width="750" height="1334">
+                <img src="./assets/images/common/fv_img1-sp.jpg" alt="サングラスをかけたスーツの男性" decoding="async" width="750" height="1334"
+                loading="eager" fetchpriority="high">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/fv_img2.jpg" media="(min-width: 768px)" width="2880"
-                  height="1536">
-                <img src="./assets/images/common/fv_img2-sp.jpg" alt="腕時計を触るスーツの男性" decoding="async" width="750" height="1334">
+                <source type="image/webp" srcset="./assets/images/common/fv_img2.webp" media="(min-width: 768px)" width="2880" height="1536">
+                <source type="image/webp" srcset="./assets/images/common/fv_img2-sp.webp" media="(max-width: 767px)" width="750" height="1334">
+                <source srcset="./assets/images/common/fv_img2.jpg" media="(min-width: 768px)" width="2880" height="1536">
+                <img src="./assets/images/common/fv_img2-sp.jpg" alt="腕時計を触るスーツの男性" decoding="async" width="750" height="1334"
+                loading="eager" fetchpriority="high">
               </picture>
             </div>
             <div class="swiper-slide">
               <picture>
-                <source srcset="./assets/images/common/fv_img3.jpg" media="(min-width: 768px)" width="2880"
-                  height="1536">
-                <img src="./assets/images/common/fv_img3-sp.jpg" alt="蝶ネクタイをしたスーツの男性" decoding="async" width="750" height="1334">
+                <source type="image/webp" srcset="./assets/images/common/fv_img3.webp" media="(min-width: 768px)" width="2880" height="1536">
+                <source type="image/webp" srcset="./assets/images/common/fv_img3-sp.webp" media="(max-width: 767px)" width="750" height="1334">
+                <source srcset="./assets/images/common/fv_img3.jpg" media="(min-width: 768px)" width="2880" height="1536">
+                <img src="./assets/images/common/fv_img3-sp.jpg" alt="蝶ネクタイをしたスーツの男性" decoding="async" width="750" height="1334"
+                loading="eager" fetchpriority="high">
               </picture>
             </div>
           </div>
@@ -135,8 +144,11 @@
           <div class="top-about__wrapper">
           <div class="top-about__content">
           <div class="top-about__media">
-            <img src="./assets/images/common/about_img1.jpg" alt="採寸する職人の写真" class="top-about__image"
-            width="240" height="333" loading="lazy" decoding="async">
+            <picture>
+              <source srcset="./assets/images/common/about_img1.webp" type="image/webp">
+              <img src="./assets/images/common/about_img1.jpg" alt="採寸する職人の写真" class="top-about__image"
+              width="240" height="333" loading="lazy" decoding="async">
+              </picture>
           </div>
           <p class="top-about__catch">
             上質を追及する<br class="u-mobile">老舗として<br>
@@ -158,6 +170,7 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
     <!--service-->
    <section id="service" class="top-service l-top-service" >
@@ -176,8 +189,11 @@
             <div class="tab__content js-tab-content is-active">
               <article class=" service-card">
                 <figure class="service__card__image">
-                  <img src="./assets/images/common/service_img1.jpg" alt="カジュアルスーツ"
-                  width="250" height="280" loading="lazy" decoding="async">
+                  <picture>
+                    <source srcset="./assets/images/common/service_img1.webp" type="image/webp">
+                    <img src="./assets/images/common/service_img1.jpg"
+                    alt="カジュアルスーツ" width="250" height="280" loading="lazy" decoding="async">
+                  </picture>
                   <span class="service-card__label">suit</span>
                 </figure>
                 <div class="service-card__body">
@@ -189,8 +205,11 @@
               </article>
               <article class="service-card" >
                 <figure class="service__card__image">
-                  <img src="./assets/images/common/service_img2.jpg" alt="リクルートスーツ"
-                  width="250" height="280" loading="lazy" decoding="async">
+                  <picture>
+                    <source srcset="./assets/images/common/service_img2.webp" type="image/webp">
+                    <img src="./assets/images/common/service_img2.jpg" alt="リクルートスーツ"
+                      width="250" height="280" loading="lazy" decoding="async">
+                  </picture>
                   <span class="service-card__label">suit</span>
                 </figure>
                 <div class="service-card__body">
@@ -202,8 +221,11 @@
               </article>
               <article class="service-card" >
                 <figure class="service__card__image">
-                  <img src="./assets/images/common/service_img3.jpg" alt="フォーマルスーツ"
-                  width="250" height="280" loading="lazy" decoding="async">
+                  <picture>
+                    <source srcset="./assets/images/common/service_img3.webp" type="image/webp">
+                    <img src="./assets/images/common/service_img3.jpg"
+                        alt="リクルートスーツ" width="250" height="280" loading="lazy" decoding="async">
+                  </picture>
                   <span class="service-card__label">suit</span>
                 </figure>
                 <div class="service-card__body">
@@ -217,8 +239,11 @@
             <div class="tab__content js-tab-content">
               <article class=" service-card">
                 <figure class="service__card__image">
-                  <img src="./assets/images/common/service_img4.jpg" alt="シューズ"
+                  <picture>
+                    <source srcset="./assets/images/common/service_img4.webp" type="image/webp">
+                    <img src="./assets/images/common/service_img4.jpg" alt="シューズ"
                   width="250" height="280" loading="lazy" decoding="async">
+                  </picture>
                   <span class="service-card__label">other</span>
                 </figure>
                 <div class="service-card__body">
@@ -230,8 +255,11 @@
               </article>
               <article class="service-card" >
                 <figure class="service__card__image">
-                  <img src="./assets/images/common/service_img5.jpg" alt="ネクタイ"
+                  <picture>
+                    <source srcset="./assets/images/common/service_img5.webp" type="image/webp">
+                    <img src="./assets/images/common/service_img5.jpg" alt="ネクタイ"
                   width="250" height="280" loading="lazy" decoding="async">
+                  </picture>
                   <span class="service-card__label">other</span>
                 </figure>
                 <div class="service-card__body">
@@ -243,8 +271,11 @@
               </article>
               <article class="service-card" >
                 <figure class="service__card__image">
-                  <img src="./assets/images/common/service_img6.jpg" alt="フォーマルバッグ"
+                  <picture>
+                    <source srcset="./assets/images/common/service_img6.webp" type="image/webp">
+                    <img src="./assets/images/common/service_img6.jpg" alt="フォーマルバッグ"
                   width="250" height="280" loading="lazy" decoding="async">
+                  </picture>
                   <span class="service-card__label">other</span>
                 </figure>
                 <div class="service-card__body">
@@ -321,8 +352,11 @@
     </div>
    </section>
    <div class="top-contact__media">
-    <img src="./assets/images/common/contact_img.jpg" alt="ハサミとメジャー" class="top-contact__image"
-    width="670" height="399" loading="lazy" decoding="async">
+    <picture>
+      <source srcset="./assets/images/common/contact_img.webp" type="image/webp">
+            <img src="./assets/images/common/contact_img.jpg" alt="ハサミとメジャー" class="top-contact__image"
+          width="670" height="399" loading="lazy" decoding="async">
+      </picture>
   </div>
 </div>
   </main>

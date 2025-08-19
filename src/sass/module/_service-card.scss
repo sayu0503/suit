@@ -9,15 +9,15 @@
 
 }
 
-.service__card__image img{
+.service__card__image img {
     aspect-ratio: 250 / 280;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include mq(md){
+
+    @include mq(md) {
         aspect-ratio: 330 / 370;
     }
-
 }
 
 .service-card__label {
@@ -32,7 +32,6 @@
     line-height: calc(17 / 14);
     padding: rem(6.5) rem(29);
     background-color: $black3;
-
 }
 
 .service-card__body {
@@ -47,8 +46,11 @@
     color: $white;
     line-height: calc(17 / 14);
     letter-spacing: 0.05em;
-    @include mq(md){
+
+    @include mq(md) {
         letter-spacing: 0.2em;
+        font-size: rem(16);
+        line-height: calc(19 / 16);
     }
 }
 
@@ -61,4 +63,3 @@
     line-height: calc(20 / 13);
     letter-spacing: 0.05em;
 }
-

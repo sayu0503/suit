@@ -3,7 +3,8 @@
 .l-page-message {
     margin-top: rem(60);
     margin-bottom: rem(63);
-    @include mq(md){
-       margin-block: rem(80);
+
+    @include mq(md) {
+        margin-block: rem(80);
     }
 }

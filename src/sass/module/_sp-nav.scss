@@ -1,6 +1,5 @@
 @use "global" as *;
 
-/* ドロワー */
 .sp-nav {
     position: absolute;
     top: 0;
@@ -10,34 +9,34 @@
     height: 100vh;
     display: none;
     background-color: rgba($black, $alpha: 0.84);
- }
+}
 
- .sp-nav__inner {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 100%;
-     height: inherit;
-     padding-top: rem(20);
-     padding-bottom: rem(20);
-     overflow-y: auto;
- }
+.sp-nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: inherit;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    overflow-y: auto;
+}
 
- .sp-nav__lists {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     gap: rem(30);
- }
+.sp-nav__lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(30);
+}
 
- .sp-nav__list {
-     display: inline-block;
-     width: 100%;
-     text-align: center;
- }
+.sp-nav__list {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
 
- .sp-nav__link {
+.sp-nav__link {
     font-size: rem(18);
     font-weight: $medium;
     font-family: $third-font-family;
@@ -49,9 +48,9 @@
     transition: 0.3s opacity;
     position: relative;
     display: inline-block;
- }
+}
 
- .sp-nav__link::before {
+.sp-nav__link::before {
     content: "";
     display: inline-block;
     background-image: url(../images/common/section_logo-white.svg);
@@ -64,9 +63,9 @@
     left: rem(20);
     height: rem(14);
     width: rem(14);
- }
+}
 
- .sp-nav__contact--link {
+.sp-nav__contact--link {
     font-size: rem(18);
     font-weight: $medium;
     font-family: $third-font-family;
@@ -75,11 +74,10 @@
     padding: rem(14) rem(70);
     border-radius: rem(6);
     border: rem(1) solid $white;
+}
 
- }
+@media (any-hover: hover) {
 
-
- @media (any-hover: hover) {
     .sp-nav__link:hover,
     .sp-nav__contact--link:hover {
         opacity: 0.6;

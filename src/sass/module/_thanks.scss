@@ -1,0 +1,17 @@
+@use "global" as *;
+
+
+.thanks {
+    padding-top: rem(300);
+}
+
+.thanks__text {
+    margin-top: rem(30);
+    text-align: center;
+    color: $white;
+}
+
+.thanks__button {
+    margin-top: rem(50);
+    text-align: center;
+}

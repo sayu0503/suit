@@ -6,7 +6,7 @@
   <meta name="format-detection" content="telephone=no" />
   <meta name="robots" content="noindex" />
   <!-- meta情報 -->
-  <title>ExciteCode</title>
+  <title>ExciteCode|About</title>
   <meta name="description" content="ExciteCodeは、伝統あるテーラーだからできる、芯地や裏地など、細部へこだわります。わたしたちはワンランク上のオーダースーツをお約束します。" />
   <meta name="keywords" content="ExciteCode,オーダーメイドスーツ,ネクタイ" />
   <!-- ogp -->
@@ -37,12 +37,12 @@
 <body>
   <header class="header" id="js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="index.html" class="header__logo--link">
         <img src="./assets/images/common/logo.svg" alt="ExciteCode" class="header__logo-img"
         width="171" height="30" loading="lazy" decoding="async">
     </a>
-      </h1>
+      </div>
       <div class="header__drawer hamburger js-hamburger u-mobile">
         <span></span>
         <span></span>
@@ -67,17 +67,19 @@
       <nav class="sp-nav js-sp-nav">
         <div class="sp-nav__inner inner">
           <ul class="sp-nav__lists">
-            <div class="sp-nav__group">
-            <li class="sp-nav__list">
-              <a href="about.html" class="sp-nav__link">About</a>
-            </li>
-            <li class="sp-nav__list">
-              <a href="index.html#service" class="sp-nav__link">Service</a>
-            </li>
-            <li class="sp-nav__list">
-              <a href="index.html#news" class="sp-nav__link">News</a>
-            </li>
-          </div>
+            <li class="sp-nav__group">
+              <ul class="sp-nav__list-lists">
+                <li class="sp-nav__list">
+                <a href="about.html" class="sp-nav__link">About</a>
+              </li>
+              <li class="sp-nav__list">
+                <a href="index.html#service" class="sp-nav__link">Service</a>
+              </li>
+              <li class="sp-nav__list">
+                <a href="index.html#news" class="sp-nav__link">News</a>
+              </li>
+            </ul>
+          </li>
             <li class="sp-nav__contact">
               <a href="contact.html" class="sp-nav__contact--link">Contact</a>
             </li>
@@ -92,8 +94,11 @@
     <div class="page-fv__inner">
           <div class="page-fv__image">
             <picture>
+              <source type="image/webp" srcset="./assets/images/common/about-fv_pc.webp" media="(min-width: 768px)" width="1440" height="534">
+              <source type="image/webp" srcset="./assets/images/common/about-fv_sp.webp" media="(max-width: 767px)" width="375" height="445">
               <source srcset="./assets/images/common/about-fv_pc.jpg" media="(min-width: 768px)" width="1440" height="534">
-              <img src="./assets/images/common/about-fv_sp.jpg" alt="スーツ職人" decoding="async" width="375" height="445">
+              <img src="./assets/images/common/about-fv_sp.jpg" alt="スーツ職人" decoding="async" width="375" height="445"
+              loading="eager" fetchpriority="high">
             </picture>
           </div>
         <div class="page-fv__header">
@@ -117,12 +122,15 @@
         </div>
         <div class="page-message__body">
             <figure class="page-message__media">
-                <img src="./assets/images/common/page-about_img1.jpg" alt="蝶ネクタイをしたスーツの男性" decoding="async" width="750" height="1334">
+              <picture>
+                <source srcset="./assets/images/common/page-about_img1.webp" type="image/webp">
+                <img src="./assets/images/common/page-about_img1.jpg" alt="蝶ネクタイをしたスーツの男性" decoding="async" width="750" height="1334" loading="lazy">
+          </picture>
             </figure>
             <div class="page-message__content">
-                <h3 class="page-message__subtitle">
+                <div class="page-message__subtitle">
                     <h2 class="section-header__title">Message</h2>
-                </h3>
+                </div>
                 <p class="page-message__text">
                     祖父から受け継いだ技術や伝統を守りながらも、時代にあったスーツを常に追求しています。お客様から「着心地が全く違う」「このスーツで毎日がんばれます」などの嬉しいお言葉がわたしたちを支えてくれました。<br>
                     オーダーメイドスーツは敷居が高いと思われがちですが、わたしたちは常にお客様の身近な存在であり続けたいと思っています。<br>
@@ -159,11 +167,7 @@
               <span>〒100-0000</span>
               <span class="company-profile__link">東京都中央区銀座4丁目○○-○○</span>
             </div>
-            <div class="company-profile__row-wrap">
-            <div href="https://maps.google.com"  class="company-profile__map-link js-modal-open" >
-              Google Maps</div>
-              <span class="company-profile__map-icon" aria-hidden="true"></span>
-            </div>
+            <div class="company-profile__row-wrap"> <div class="company-profile__map-link js-modal-open"> Google Maps</div> <span class="company-profile__map-icon" aria-hidden="true"></span> </div>
           </dd>
         </div>
 
@@ -205,8 +209,11 @@
      </div>
     </section>
     <div class="top-contact__media">
-     <img src="./assets/images/common/contact_img.jpg" alt="ハサミとメジャー" class="top-contact__image"
-     width="670" height="399" loading="lazy" decoding="async">
+      <picture>
+        <source srcset="./assets/images/common/contact_img.webp" type="image/webp">
+              <img src="./assets/images/common/contact_img.jpg" alt="ハサミとメジャー" class="top-contact__image"
+            width="670" height="399" loading="lazy" decoding="async">
+        </picture>
    </div>
  </div>
 

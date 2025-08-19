@@ -3,28 +3,29 @@
 .js-fv-swiper,
 .swiper-slide picture,
 .swiper-slide img {
-  height: inherit;
-  height: 100%;
-  width: 100%;
+    height: inherit;
+    height: 100%;
+    width: 100%;
 }
 
 .swiper-slide img {
-  object-fit: cover;
+    object-fit: cover;
 }
 
 .swiper-slide {
-  height: auto;
+    height: auto;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     content: "";
-    @include mq(md){
+
+    @include mq(md) {
         position: absolute;
         top: 58%;
         z-index: 20;
-        margin-top: -20px;
-        color: #fff;
+        margin-top: rem(-20);
+        color: $white2;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -36,14 +37,14 @@
 }
 
 .swiper-button-prev {
-    @include mq(md){
+    @include mq(md) {
         left: 5%;
         top: 56%;
     }
 }
 
 .swiper-button-next {
-    @include mq(md){
+    @include mq(md) {
         right: 5%;
         top: 56%;
     }
@@ -52,14 +53,15 @@
 .swiper-button-next:after,
 .swiper-button-prev:after {
     content: "";
-    @include mq(md){
+
+    @include mq(md) {
         background-repeat: no-repeat;
         background-size: contain;
     }
 }
 
 .swiper-button-prev::after {
-    @include mq(md){
+    @include mq(md) {
         background-image: url(../images/common/prev.png);
         width: rem(5);
         height: rem(10);
@@ -67,7 +69,7 @@
 }
 
 .swiper-button-next::after {
-    @include mq(md){
+    @include mq(md) {
         background-image: url(../images/common/next.png);
         width: rem(5);
         height: rem(10);
@@ -78,10 +80,11 @@
     display: flex;
     justify-content: center;
     gap: rem(10);
-    @include mq(md){
+
+    @include mq(md) {
         gap: rem(20);
     }
-  }
+}
 
 .swiper-pagination-bullet {
     opacity: 1;
@@ -89,10 +92,10 @@
     width: rem(40);
     height: rem(2);
     background-color: $black3;
-    @include mq(md){
+
+    @include mq(md) {
         width: rem(70);
     }
-
 }
 
 .swiper-pagination-bullet-active {
@@ -100,15 +103,20 @@
     width: rem(40);
     height: rem(2);
     background-color: $white;
-    @include mq(md){
+
+    @include mq(md) {
         width: rem(70);
     }
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     bottom: rem(21);
-    @include mq(md){
-       bottom: rem(43);
-       left: rem(10);
+
+    @include mq(md) {
+        bottom: rem(43);
+        left: rem(10);
     }
 }

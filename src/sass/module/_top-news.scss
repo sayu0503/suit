@@ -10,7 +10,8 @@
     flex-direction: column;
     gap: rem(22);
     padding-inline: rem(30);
-    @include mq(md){
+
+    @include mq(md) {
         margin-top: rem(22);
         margin-inline: auto;
         max-width: 90%;
@@ -20,10 +21,11 @@
 
 .top-news__item {
     border-bottom: rem(1) solid $gray4;
-    @include mq(md){
-       display: flex;
-       gap: rem(30);
-       align-items: center;
+
+    @include mq(md) {
+        display: flex;
+        gap: rem(30);
+        align-items: center;
     }
 
 }
@@ -36,10 +38,10 @@
     display: flex;
     gap: rem(30);
     align-items: center;
-    @include mq(md){
+
+    @include mq(md) {
         gap: rem(30);
     }
-
 }
 
 .top-news__date {
@@ -48,6 +50,11 @@
     font-family: $base-font-family;
     color: $black;
     line-height: calc(16 / 13);
+
+    @include mq(md){
+        font-size: rem(14);
+        line-height: calc(17 / 14);
+    }
 }
 
 .top-news__label {
@@ -65,10 +72,13 @@
     font-weight: $regular;
     font-family: $base-font-family;
     color: $black;
-    line-height: calc(26 / 14);
+    line-height: calc(17 / 14);
     margin-top: rem(20);
     padding-bottom: rem(18);
-    @include mq(md){
-       letter-spacing: 0.05em;
+
+    @include mq(md) {
+        letter-spacing: 0.05em;
+        font-size: rem(15);
+        line-height: calc(18 / 15);
     }
 }

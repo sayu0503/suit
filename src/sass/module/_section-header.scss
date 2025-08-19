@@ -4,8 +4,9 @@
     display: flex;
     align-items: center;
     gap: rem(16);
-    @include mq(md){
-       gap: rem(30);
+
+    @include mq(md) {
+        gap: rem(30);
     }
 }
 
@@ -20,7 +21,8 @@
     display: flex;
     padding-left: rem(30);
     align-items: center;
-    @include mq(md){
+
+    @include mq(md) {
         font-size: rem(38);
         line-height: calc(46 / 38);
         padding-left: rem(33);
@@ -61,4 +63,3 @@
 .section-header__line--color {
     background-color: $gray2;
 }
-

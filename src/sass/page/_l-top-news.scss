@@ -3,7 +3,8 @@
 .l-top-news {
     padding-top: rem(60);
     padding-bottom: rem(46);
-    @include mq(md){
+
+    @include mq(md) {
         padding-top: rem(80);
         padding-bottom: rem(63);
     }

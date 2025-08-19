@@ -1,10 +1,9 @@
 @use "global" as *;
 
-
 .top-about__wrapper {
-    @include mq(md){
-       width: rem(637);
-       margin-inline: auto;
+    @include mq(md) {
+        width: rem(637);
+        margin-inline: auto;
     }
 }
 
@@ -13,18 +12,20 @@
     flex-direction: column-reverse;
     gap: rem(40);
     margin-top: rem(52);
-    @include mq(md){
-       flex-direction: initial;
-       gap: rem(30);
-       padding-left: rem(60);
-       margin-top: rem(78);
+
+    @include mq(md) {
+        flex-direction: initial;
+        gap: rem(30);
+        padding-left: rem(60);
+        margin-top: rem(78);
     }
 }
 
 .top-about__media {
     padding-inline: rem(52);
-    @include mq(md){
-       padding-inline: rem(0);
+
+    @include mq(md) {
+        padding-inline: rem(0);
     }
 }
 
@@ -33,10 +34,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    @include mq(md){
-         aspect-ratio: 360 / 500;
-    }
 
+    @include mq(md) {
+        aspect-ratio: 360 / 500;
+    }
 }
 
 .top-about__catch {
@@ -49,20 +50,22 @@
     writing-mode: vertical-rl;
     margin: 0 auto;
     padding-right: rem(12);
-    @include mq(md){
-       font-size: rem(22);
-       margin-top: rem(20);
-       padding-right: rem(50);
-       letter-spacing: 0.43em;
-       line-height: 2;
+
+    @include mq(md) {
+        font-size: rem(22);
+        margin-top: rem(20);
+        padding-right: rem(50);
+        letter-spacing: 0.43em;
+        line-height: 2;
     }
 }
 
 .top-about__text {
     margin-top: rem(-83);
     padding-inline: rem(14) rem(26);
-    @include mq(md){
-       margin-top: rem(-70);
+
+    @include mq(md) {
+        margin-top: rem(-70);
     }
 }
 
@@ -73,21 +76,22 @@
     color: $white;
     line-height: calc(26 / 14);
     letter-spacing: 0.047em;
-    @include mq(md){
-       font-size: rem(16);
-       line-height: calc(32 / 16);
-       letter-spacing: 0.05em;
+
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(32 / 16);
+        letter-spacing: 0.05em;
     }
 }
 
 .top-about__btn {
-   display: flex;
-   justify-content: center;
-   margin-top: rem(30);
-   padding-right: rem(13);
-   @include mq(md){
-       margin-top: rem(42);
-       padding-right: rem(0);
-   }
-}
+    display: flex;
+    justify-content: center;
+    margin-top: rem(30);
+    padding-right: rem(13);
 
+    @include mq(md) {
+        margin-top: rem(42);
+        padding-right: rem(0);
+    }
+}
